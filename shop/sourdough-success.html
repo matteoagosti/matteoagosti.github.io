@@ -15,10 +15,27 @@
   </script>  
 </head>
 <body style="text-align: center">
-  <img src="sourdough-success.jpg"/>
-  <br/>
-  <b>CHF 1</b>
-  <br/>
-  <button onclick="purchase('Matteo Agosti's recipe for sourdough success', 1);"/>Buy it!</button>
+  <button is="purchase"/>Buy for 1 CHF</button></br />
+  <img height="400" src="sourdough-success.jpg"/>
+  <script>
+    document.getElementById("purchase").addEventListener("click", function () {
+        gtag("event", "purchase", {
+              affiliation: "Google Merchandise Store",
+              value: 1,
+              tax: 0,
+              shipping: 0,
+              currency: "CHF",
+              items: [
+              {
+                item_id: "kcooltla",
+                item_name: "Stan and Friends Tee",
+                affiliation: "Google Merchandise Store",
+                price: 1,
+                quantity: 1
+              }]
+        });
+        alert("Thank you for your purchase!"); 
+      });
+    </script>  
 </body>
 </html>
