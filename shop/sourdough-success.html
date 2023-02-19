@@ -21,18 +21,19 @@
   <script>
     document.getElementById("purchase").addEventListener("click", function () {
         gtag("event", "purchase", {
-              affiliation: "Google Merchandise Store",
-              value: 1,
-              tax: 0,
-              shipping: 0,
-              currency: "CHF",
-              items: [
+          transaction_id: "T_12345",
+          value: 1,
+          tax: 0,
+          shipping: 0,
+          currency: "CHF",
+          items: [
               {
                 item_id: "kcooltla",
-                item_name: "Stan and Friends Tee",
+                item_name: "Matteo Agosti's recipe for sourdough success",
                 affiliation: "Google Merchandise Store",
                 price: 1,
-                quantity: 1
+                quantity: 1,
+                index: 0
               }]
         });
         alert("Thank you for your purchase!"); 
